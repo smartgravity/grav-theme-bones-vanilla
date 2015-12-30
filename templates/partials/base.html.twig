@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/metadata.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/foundation.css',103) %}
+        {% do assets.addCss('theme://css/bones-styles.css',102) %}
+        {% do assets.addCss('theme://css/bones-colors.css',101) %}
+        {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
+        {% do assets.addCss('//fonts.googleapis.com/css?family=Special+Elite',100) %}
+    {% endblock %}
+    {{ assets.css() }}
+    {% do assets.addJs('jquery',109) %}
+    {{ assets.js() }}
+{% endblock head%}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+<div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-{{ theme_config.mobilemenu_position }}" id="offCanvas" data-off-canvas data-position="{{ theme_config.mobilemenu_position }}">
+            <div class="row sg-center sg-spacer-small">
+                <div class="sg-content">
+                    {% set content = pages.find('/mobilemenu').content %}
+                    {% if content %}
+                        {{ content }}
+                    {% endif %}
+                </div>
+            </div>
+            <div id="mobile-navigation">
+                {% block mobile_navigation %}
+                {% include 'partials/navigation_mobile.html.twig' %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+
+        {% block header %}
+        <header id="header">
+
+        	<div class="row sg-header">
+	            <div id="logo">
+	                <a href="{{ base_url == '' ? '/' : base_url }}">
+						{% set image = pages.find('/logo').media.images|first %}
+						{% if image %}
+						    {{ image.cropResize(96,96).html }}
+						{% endif %}
+	                </a>
+	            </div>
+	            <div id="sg-header-title">
+	                <a href="{{ base_url == '' ? '/' : base_url }}">
+	                    <h3>{{ config.site.title }}</h3>
+	                </a>
+	            </div>
+	            <div id="navigation" class="{% if theme_config.mobilemenu_breakpoint == 'all' %}hide{% else %}show-for-{{ theme_config.mobilemenu_breakpoint }}{% endif %}">
+	                {% block header_extra %}{% endblock %}
+	                {% if config.plugins.langswitcher.enabled %}
+	                {% include 'partials/langswitcher.html.twig' %}
+	                {% endif %}
+	                {% block header_navigation %}
+	                {% include 'partials/navigation.html.twig' %}
+	                {% endblock %}
+	            </div>
+                <i class="mobile-nav-toggle fa fa-fw fa-bars float-right hide-for-{{ theme_config.mobilemenu_breakpoint }}" data-open="offCanvas"></i>
+            </div>
+        </header>
+        {% endblock %}
+
+        {% block body %}
+        <section id="body" class="{{ class }}">
+            {% block content %}{% endblock %}
+        </section>
+        {% endblock %}
+
+        {% block footer %}
+        <footer id="footer">
+            <div class="row sg-center">
+    			{% set content = pages.find('/footer').content %}
+    			{% if content %}
+    			    {{ content }}
+    			{% endif %}
+            </div>
+        </footer>
+        {% endblock %}
+
+        {% block bottom %}
+            {% block javascripts %}
+                {% do assets.addJs('theme://js/what-input.js',{'priority':105, 'group':'bottom'}) %}
+                {% do assets.addJs('theme://js/foundation.js',{'priority':104, 'group':'bottom'}) %}
+                {% do assets.addInlineJs('$(document).foundation();',{'priority':99, 'pipeline':false, 'group':'bottom'}) %}
+                {% if theme_config.google_prettify.enabled %}
+                    {% do assets.addJs('https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js',{'priority':100, 'group':'bottom'}) %}
+                {% endif %}
+            {% endblock %}
+            {{ assets.js('bottom') }}
+        {% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
