@@ -1,0 +1,211 @@
+/* BEGIN SmartGravity HEADER */
+#header {
+  border-color: #f6f6f6; }
+  #header #sg-header-title h3 {
+    color: #1F1D0F; }
+/* END SmartGravity HEADER */
+
+/* BEGIN SmartGravity Mainmenu Navigation */
+#sg-mainmenu .menu > li > a, #sg-mainmenu-mobile .menu > li > a {
+  border-color: #cacaca;
+  background-color: #fff; }
+  #sg-mainmenu .menu > li > a:hover, #sg-mainmenu-mobile .menu > li > a:hover {
+    background-color: #f6f6f6; }
+#sg-mainmenu .menu > li.active > a, #sg-mainmenu-mobile .menu > li.active > a {
+  background-color: #f6f6f6; }
+
+.mobile-nav-toggle {
+  color: #1E8CC7; }
+  .mobile-nav-toggle:hover {
+    color: #54b3e5; }
+/* END SmartGravity Mainmenu Navigation */
+
+/* BEGIN TAXONOMY TAGS */
+.tags a {
+  border-color: #cacaca;
+  background-color: #fff;
+  color: #1E8CC7; }
+  .tags a:hover {
+    color: #54b3e5; }
+  .tags a.active {
+    background-color: #f6f6f6; }
+/* END TAXONOMY TAGS */
+
+/* BEGIN BREADCRUMBS */
+.sg-breadcrumb {
+  border-color: #f6f6f6; }
+/* END BREADCRUMBS */
+
+/* BEGIN SmartGravity MAIN CONTENT */
+.top-bar#sg-in-page-navigation {
+  background-color: #fff;
+  color: #777; }
+  .top-bar#sg-in-page-navigation a {
+    color: #777; }
+  .top-bar#sg-in-page-navigation ul {
+    background-color: transparent; }
+
+#sg-in-page-navigation {
+  border-color: #cacaca; }
+  #sg-in-page-navigation a.active {
+    color: #1E8CC7; }
+
+pre {
+  background: #f6f6f6;
+  border-color: #cacaca; }
+  pre code {
+    background-color: transparent; }
+
+code {
+  background-color: #f6f6f6;
+  border-color: #cacaca; }
+/* END SmartGravity MAIN CONTENT */
+
+/* BEGIN SmartGravity FOOTER */
+#footer {
+  border-color: #cacaca; }
+/* END SmartGravity FOOTER */
+
+/* BEGIN SmartGravity COLORS */
+.sg-highlight-dark, .sg-highlight-dark .sg-content, .sg-color-light-gray, .sg-color-medium-gray {
+  color: #1F1D0F; }
+  .sg-highlight-dark a, .sg-highlight-dark .sg-content a, .sg-color-light-gray a, .sg-color-medium-gray a {
+    color: rgba(31, 29, 15, 0.75); }
+    .sg-highlight-dark a:hover, .sg-highlight-dark .sg-content a:hover, .sg-color-light-gray a:hover, .sg-color-medium-gray a:hover {
+      color: rgba(31, 29, 15, 0.9); }
+
+.column-highlight-dark .sg-column-block, .column-highlight-dark .sg-content .sg-column-block, .column-color-light-gray .sg-column-block, .column-color-medium-gray .sg-column-block {
+  color: #1F1D0F; }
+  .column-highlight-dark .sg-column-block a, .column-highlight-dark .sg-content .sg-column-block a, .column-color-light-gray .sg-column-block a, .column-color-medium-gray .sg-column-block a {
+    color: rgba(31, 29, 15, 0.75); }
+    .column-highlight-dark .sg-column-block a:hover, .column-highlight-dark .sg-content .sg-column-block a:hover, .column-color-light-gray .sg-column-block a:hover, .column-color-medium-gray .sg-column-block a:hover {
+      color: rgba(31, 29, 15, 0.9); }
+
+.sg-highlight-light, .sg-highlight-light .sg-content, .sg-color-dark-gray, .sg-color-yellow, .sg-color-orange, .sg-color-blue, .sg-color-red, .sg-color-purple, .sg-color-green {
+  color: #fff; }
+  .sg-highlight-light a, .sg-highlight-light .sg-content a, .sg-color-dark-gray a, .sg-color-yellow a, .sg-color-orange a, .sg-color-blue a, .sg-color-red a, .sg-color-purple a, .sg-color-green a {
+    color: rgba(255, 255, 255, 0.75); }
+    .sg-highlight-light a:hover, .sg-highlight-light .sg-content a:hover, .sg-color-dark-gray a:hover, .sg-color-yellow a:hover, .sg-color-orange a:hover, .sg-color-blue a:hover, .sg-color-red a:hover, .sg-color-purple a:hover, .sg-color-green a:hover {
+      color: rgba(255, 255, 255, 0.9); }
+
+.column-highlight-light .sg-column-block, .column-highlight-light .sg-content .sg-column-block, .column-color-dark-gray .sg-column-block, .column-color-yellow .sg-column-block, .column-color-orange .sg-column-block, .column-color-blue .sg-column-block, .column-color-red .sg-column-block, .column-color-purple .sg-column-block, .column-color-green .sg-column-block {
+  color: #fff; }
+  .column-highlight-light .sg-column-block a, .column-highlight-light .sg-content .sg-column-block a, .column-color-dark-gray .sg-column-block a, .column-color-yellow .sg-column-block a, .column-color-orange .sg-column-block a, .column-color-blue .sg-column-block a, .column-color-red .sg-column-block a, .column-color-purple .sg-column-block a, .column-color-green .sg-column-block a {
+    color: rgba(255, 255, 255, 0.75); }
+    .column-highlight-light .sg-column-block a:hover, .column-highlight-light .sg-content .sg-column-block a:hover, .column-color-dark-gray .sg-column-block a:hover, .column-color-yellow .sg-column-block a:hover, .column-color-orange .sg-column-block a:hover, .column-color-blue .sg-column-block a:hover, .column-color-red .sg-column-block a:hover, .column-color-purple .sg-column-block a:hover, .column-color-green .sg-column-block a:hover {
+      color: rgba(255, 255, 255, 0.9); }
+
+.sg-color-light-gray {
+  background-color: #f6f6f6; }
+
+.sg-color-medium-gray {
+  background-color: #cacaca; }
+
+.sg-color-dark-gray {
+  background-color: #444; }
+
+.sg-color-yellow {
+  background-color: #ffb300; }
+
+.sg-color-orange {
+  background-color: #ee7933; }
+
+.sg-color-blue {
+  background-color: #0183a8; }
+
+.sg-color-red {
+  background-color: #ef4a44; }
+
+.sg-color-purple {
+  background-color: #874f9a; }
+
+.sg-color-green {
+  background-color: #00b060; }
+
+.column-color-light-gray .sg-column-block {
+  background-color: #f6f6f6; }
+.column-color-medium-gray .sg-column-block {
+  background-color: #cacaca; }
+.column-color-dark-gray .sg-column-block {
+  background-color: #444; }
+.column-color-yellow .sg-column-block {
+  background-color: #ffb300; }
+.column-color-orange .sg-column-block {
+  background-color: #ee7933; }
+.column-color-blue .sg-column-block {
+  background-color: #0183a8; }
+.column-color-red .sg-column-block {
+  background-color: #ef4a44; }
+.column-color-purple .sg-column-block {
+  background-color: #874f9a; }
+.column-color-green .sg-column-block {
+  background-color: #00b060; }
+
+.button.light {
+  color: #1F1D0F;
+  background-color: #fff; }
+  .button.light:hover, .button.light:focus {
+    color: rgba(31, 29, 15, 0.75);
+    background-color: rgba(255, 255, 255, 0.75); }
+.button.dark {
+  color: #fff;
+  background-color: #1F1D0F; }
+  .button.dark:hover, .button.dark:focus {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(31, 29, 15, 0.75); }
+.button.hollow.light {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent; }
+  .button.hollow.light:hover, .button.hollow.light:focus {
+    color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.75); }
+.button.hollow.dark {
+  color: #1F1D0F;
+  border-color: #1F1D0F;
+  background-color: transparent; }
+  .button.hollow.dark:hover, .button.hollow.dark:focus {
+    color: rgba(31, 29, 15, 0.75);
+    border-color: rgba(31, 29, 15, 0.75); }
+
+blockquote {
+  border-color: #f6f6f6; }
+  blockquote p {
+    color: #8a8a8a; }
+  blockquote cite {
+    color: #8a8a8a; }
+
+blockquote > blockquote > blockquote > p {
+  border-color: #F0AD4E;
+  border-radius: 3px;
+  background: #FCF8F2;
+  color: #df8a13; }
+  blockquote > blockquote > blockquote > p a {
+    color: #b06d0f; }
+    blockquote > blockquote > blockquote > p a:hover {
+      color: #f2b866; }
+blockquote > blockquote > blockquote > blockquote > p {
+  border-color: #D9534F;
+  background: #FDF7F7;
+  color: #b52b27; }
+  blockquote > blockquote > blockquote > blockquote > p a {
+    color: #8b211e; }
+    blockquote > blockquote > blockquote > blockquote > p a:hover {
+      color: #de6764; }
+blockquote > blockquote > blockquote > blockquote > blockquote > p {
+  border-color: #5BC0DE;
+  background: #F4F8FA;
+  color: #28a1c5; }
+  blockquote > blockquote > blockquote > blockquote > blockquote > p a {
+    color: #1f7e9a; }
+    blockquote > blockquote > blockquote > blockquote > blockquote > p a:hover {
+      color: #70c8e2; }
+blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p {
+  border-color: #5CB85C;
+  background: #F1F9F1;
+  color: #3d8b3d; }
+  blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p a {
+    color: #2d672d; }
+    blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p a:hover {
+      color: #6ec06e; }
+/* END SmartGravity COLORS */

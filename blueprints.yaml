@@ -1,0 +1,54 @@
+name: Bones Vanilla
+version: 0.1.0
+description: "SmartGravity's **Bones Vanilla** is basic starting theme for **Grav**"
+icon: hand-peace-o
+author:
+  name: SmartGravity
+  email: info@smartgravity.com
+  url: http://www.smartgravity.com
+homepage: https://github.com/smartgravity/grav-theme-bones-vanilla
+demo: http://demo.smartgravity.com/grav-bones-vanilla
+keywords: bones, theme, foundation, foundation6, core, simple, responsive, basic
+bugs: https://github.com/smartgravity/grav-theme-bones-vanilla/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+    google_prettify.enabled:
+        type: toggle
+        label: Google Prettify Code
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+    mobilemenu_breakpoint:
+      type: select
+      label: Mobile Menu Breakpoint
+      classes: fancy
+      default: medium
+      options:
+        'large': 'Large'
+        'medium': 'Medium'
+        'all': 'Mobile for All'
+    mobilemenu_position:
+      type: select
+      label: Mobile Menu Position
+      classes: fancy
+      default: left
+      options:
+        'left': 'left'
+        'right': 'right'
