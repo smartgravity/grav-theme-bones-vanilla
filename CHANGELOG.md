@@ -1,5 +1,11 @@
+# v0.1.2
+## 01/05/2016
+
+1. [](#bugfix)
+		* Fixed date for current release
+
 # v0.1.1
-## 01/05/2015
+## 01/05/2016
 
 1. [](#improved)
     * Added README.md file
