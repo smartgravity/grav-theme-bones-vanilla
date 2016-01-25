@@ -1,6 +1,10 @@
 # Bones Vanilla - Grav Theme
 
+**Foundation: v6.1.1** | **FontAwesome: v4.5.0**
+
 **Bones Vanilla** is a [Grav](http://getgrav.org) theme based on [Foundation](http://foundation.zurb.com/) by Zurb and Includes [FontAwesome](https://fortawesome.github.io/Font-Awesome/). This is a base theme meant to be customized. The idea is to provide a starting point for your next custom theme.
+
+![Bones Vanilla Screenshot](assets/bones-vanilla-macbook-pro.png)
 
 # Installation
 
