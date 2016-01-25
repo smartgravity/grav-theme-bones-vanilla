@@ -1,7 +1,7 @@
 name: Bones Vanilla
-version: 0.1.0
+version: 0.3.0
 description: "SmartGravity's **Bones Vanilla** is basic starting theme for **Grav**"
-icon: hand-peace-o
+icon: cubes
 author:
   name: SmartGravity
   email: info@smartgravity.com
@@ -15,40 +15,155 @@ license: MIT
 form:
   validation: loose
   fields:
-    dropdown.enabled:
-        type: toggle
-        label: Dropdown in navbar
-        highlight: 1
-        default: 1
-        options:
-          1: Enabled
-          0: Disabled
-        validate:
-          type: bool
-    google_prettify.enabled:
-        type: toggle
-        label: Google Prettify Code
-        highlight: 1
-        default: 1
-        options:
-          1: Enabled
-          0: Disabled
-        validate:
-          type: bool
-    mobilemenu_breakpoint:
-      type: select
-      label: Mobile Menu Breakpoint
-      classes: fancy
-      default: medium
-      options:
-        'large': 'Large'
-        'medium': 'Medium'
-        'all': 'Mobile for All'
-    mobilemenu_position:
-      type: select
-      label: Mobile Menu Position
-      classes: fancy
-      default: left
-      options:
-        'left': 'left'
-        'right': 'right'
+
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+
+        general_info:
+          type: tab
+          title: Info
+          fields:
+
+            theme_info_title:
+              type: section
+              title: Theme Summary
+              underline: true
+
+              fields:
+                columns:
+                  type: columns
+                  fields:
+                    column1:
+                      type: column
+                      fields:
+
+                        theme_links:
+                          type: display
+                          label: <p style="padding-left:0;">The <strong>Bones</strong> theme is built on <a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation</a> and meant to be customized. Easily toggle all javascript and stylesheets on and off so you can keep the page weight slim and still have all the resources you need. </p><p style="padding-left:0;"><a href="http://demos.smartgravity.com/grav-bones-vanilla/" target="_blank">Grav Bones Vanilla Demo <i class="fa fa-external-link"></i></a></p>
+
+                    column2:
+                      type: column
+                      fields:
+
+                        theme_info:
+                          type: display
+                          label: <p style="text-align:center;padding-left:0;"><img src="../../user/themes/bones-vanilla/bones-vanilla-macbook-pro.png" alt="Bones Vanilla Screenshot" /></p>
+
+            foundation_info_title:
+              type: section
+              title: Zurb Foundation
+              underline: true
+
+              fields:
+                columns:
+                  type: columns
+                  fields:
+                    column1:
+                      type: column
+                      fields:
+
+                        foundation_info:
+                          type: display
+                          label: <p style="padding-left:0;"><em>"Foundation is semantic, readable, flexible, and completely customizable. We’re constantly adding new resources and code snippets, including these handy HTML templates to help get you started!"</em></p><p style="padding-left:0;"><a href="http://foundation.zurb.com/" target="_blank">Foundation Homepage <i class="fa fa-external-link"></i></a><br /><a href="http://foundation.zurb.com/sites/docs/" target="_blank">Foundation Docs <i class="fa fa-external-link"></i></a></p>
+
+                    column2:
+                      type: column
+                      fields:
+
+                        foundation_image:
+                          type: display
+                          label: <p style="text-align:center;padding-left:0;"><img src="../../user/themes/bones-vanilla/zurb-foundation-macbook.png" alt="Zurb Foundation" /></p>
+
+        general_options:
+          type: tab
+          title: Options
+          fields:
+
+            general_options_title:
+              type: section
+              title: General Options
+              underline: true
+
+            fontawesome.enabled:
+                type: toggle
+                label: FontAwesome
+                highlight: 1
+                default: 1
+                options:
+                  1: Enabled
+                  0: Disabled
+                validate:
+                  type: bool
+            google_fonts_logo.enabled:
+                type: toggle
+                label: Google Fonts for Logo
+                highlight: 1
+                default: 1
+                options:
+                  1: Enabled
+                  0: Disabled
+                validate:
+                  type: bool
+            google_prettify.enabled:
+                type: toggle
+                label: Google Prettify Code
+                highlight: 1
+                default: 1
+                options:
+                  1: Enabled
+                  0: Disabled
+                validate:
+                  type: bool
+
+            menu_options_title:
+              type: section
+              title: Menu Options
+              underline: true
+
+            dropdown.enabled:
+                type: toggle
+                label: Dropdown in Mainmenu
+                highlight: 1
+                default: 1
+                options:
+                  1: Enabled
+                  0: Disabled
+                validate:
+                  type: bool
+            mobilemenu_breakpoint:
+              type: select
+              label: Mobile Menu Breakpoint
+              classes: fancy
+              size: small
+              default: large
+              options:
+                'large': 'Large'
+                'medium': 'Medium'
+                'all': 'Mobile for All'
+            mobilemenu_position:
+              type: select
+              label: Mobile Menu Position
+              classes: fancy
+              size: small
+              default: left
+              options:
+                'left': 'left'
+                'right': 'right'
+
+            custom_css_files_title:
+              type: section
+              title: Custom CSS
+              underline: true
+              
+            css_custom.enabled:
+                type: toggle
+                label: Custom
+                highlight: 1
+                default: 0
+                options:
+                  1: Enabled
+                  0: Disabled
+                validate:
+                  type: bool

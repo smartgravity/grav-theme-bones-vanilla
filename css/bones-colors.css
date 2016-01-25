@@ -14,9 +14,9 @@
 #sg-mainmenu .menu > li.active > a, #sg-mainmenu-mobile .menu > li.active > a {
   background-color: #f6f6f6; }
 
-.mobile-nav-toggle {
+.mobile-nav-toggle, .sg-mobilemenu-icon {
   color: #1E8CC7; }
-  .mobile-nav-toggle:hover {
+  .mobile-nav-toggle:hover, .sg-mobilemenu-icon:hover {
     color: #54b3e5; }
 /* END SmartGravity Mainmenu Navigation */
 

@@ -15,8 +15,15 @@
         {% do assets.addCss('theme://css/foundation.css',103) %}
         {% do assets.addCss('theme://css/bones-styles.css',102) %}
         {% do assets.addCss('theme://css/bones-colors.css',101) %}
-        {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
-        {% do assets.addCss('//fonts.googleapis.com/css?family=Special+Elite',100) %}
+        {% if theme_config.css_custom.enabled %}
+            {% do assets.addCss('theme://css/custom.css',10) %}
+        {% endif %}
+        {% if theme_config.fontawesome.enabled %}
+            {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
+        {% endif %}
+        {% if theme_config.google_fonts_logo.enabled %}
+            {% do assets.addCss('//fonts.googleapis.com/css?family=Special+Elite',100) %}
+        {% endif %}
     {% endblock %}
     {{ assets.css() }}
     {% do assets.addJs('jquery',109) %}
@@ -57,8 +64,8 @@
 	            </div>
 	            <div id="sg-header-title">
 	                <a href="{{ base_url == '' ? '/' : base_url }}">
-	                    <h3 style="font-family: 'Special Elite', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;">{{ config.site.title }}</h3>
-	                </a>
+                        <h3{% if theme_config.google_fonts_logo.enabled %} style="font-family: 'Special Elite', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"{% endif %}>{{ config.site.title }}</h3>
+                    </a>
 	            </div>
 	            <div id="navigation" class="{% if theme_config.mobilemenu_breakpoint == 'all' %}hide{% else %}show-for-{{ theme_config.mobilemenu_breakpoint }}{% endif %}">
 	                {% block header_extra %}{% endblock %}
@@ -69,7 +76,15 @@
 	                {% include 'partials/navigation.html.twig' %}
 	                {% endblock %}
 	            </div>
-                <i class="mobile-nav-toggle fa fa-fw fa-bars float-right hide-for-{{ theme_config.mobilemenu_breakpoint }}" data-open="offCanvas"></i>
+                {% if page.header.fontawesome == "disabled" %}
+                    <button class="sg-mobilemenu-icon float-right hide-for-{{ theme_config.mobilemenu_breakpoint }}" data-open="offCanvas">[ menu ]</button>
+                {% elseif page.header.fontawesome == "enabled" %}
+                    <i class="mobile-nav-toggle fa fa-fw fa-bars float-right hide-for-{{ theme_config.mobilemenu_breakpoint }}" data-open="offCanvas"></i>
+                {% elseif theme_config.fontawesome.enabled %}
+                    <i class="mobile-nav-toggle fa fa-fw fa-bars float-right hide-for-{{ theme_config.mobilemenu_breakpoint }}" data-open="offCanvas"></i>
+                {% else %}
+                    <button class="sg-mobilemenu-icon float-right hide-for-{{ theme_config.mobilemenu_breakpoint }}" data-open="offCanvas">[ menu ]</button>
+                {% endif %}
             </div>
         </header>
         {% endblock %}

@@ -123,6 +123,15 @@ ol {
   cursor: pointer;
   font-size: 2rem;
   margin: 0.7rem 0; }
+/* Mobilemenu Icon substitute when FontAwesome is disabled */
+.sg-mobilemenu-icon {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin: 6px;
+  padding: 0; }
 /* END SmartGravity Mainmenu Navigation */
 
 /* BEGIN SmartGravity IN PAGE NAVIGATION */
@@ -151,6 +160,7 @@ ol {
   border-radius: 3px;
   font-size: 0.85rem;
   margin: 0 2px; }
+
 /* END TAXONOMY TAGS */
 
 /* BEGIN BREADCRUMBS */
@@ -279,10 +289,8 @@ img.sg-align-center {
 
 .title-spacer-small h2.sg-title {
   padding: 0.5rem 0 1rem; }
-
 .title-spacer-medium h2.sg-title {
   padding: 1rem 0 2rem; }
-
 .title-spacer-large h2.sg-title {
   padding: 2rem 0 3rem; }
 
@@ -347,7 +355,6 @@ img.sg-align-center {
 
   .small-nopaddingleft {
     padding-left: 0 !important; } }
-
 /* medium covers medium size and up */
 @media screen and (min-width: 40em) {
   .medium-nomarginall {
@@ -379,7 +386,6 @@ img.sg-align-center {
 
   .medium-nopaddingleft {
     padding-left: 0 !important; } }
-
 /* large covers large size and up */
 @media screen and (min-width: 64em) {
   .large-nomarginall {
@@ -411,21 +417,30 @@ img.sg-align-center {
 
   .large-nopaddingleft {
     padding-left: 0 !important; } }
-
 .sg-spacer-small .sg-content {
   padding: 1rem 0.9375rem; }
+  .off-canvas .sg-spacer-small .sg-content {
+    padding: 1rem 0.9375rem; }
 
 .sg-spacer-medium .sg-content {
   padding: 2rem 0.9375rem; }
+  .off-canvas .sg-spacer-medium .sg-content {
+    padding: 2rem 0.9375rem; }
 
 .sg-spacer-large .sg-content {
   padding: 5rem 0.9375rem; }
+  .off-canvas .sg-spacer-large .sg-content {
+    padding: 5rem 0.9375rem; }
 
 .sg-spacer-xlarge .sg-content {
   padding: 7rem 0.9375rem; }
+  .off-canvas .sg-spacer-xlarge .sg-content {
+    padding: 7rem 0.9375rem; }
 
 .sg-spacer-xxlarge .sg-content {
   padding: 9rem 0.9375rem; }
+  .off-canvas .sg-spacer-xxlarge .sg-content {
+    padding: 9rem 0.9375rem; }
 /* END SmartGravity UTILITIES */
 
 /* BEGIN NESTED BLOCKQUOTES STYLE OVERRIDES */
