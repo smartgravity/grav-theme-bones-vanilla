@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
-
     {% block stylesheets %}
         {% do assets.addCss('theme://css/foundation.css',103) %}
         {% do assets.addCss('theme://css/bones-styles.css',102) %}
@@ -18,11 +17,16 @@
         {% if theme_config.css_custom.enabled %}
             {% do assets.addCss('theme://css/custom.css',10) %}
         {% endif %}
-        {% if theme_config.fontawesome.enabled %}
-            {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
+        {% if page.header.animate_css == "disabled" %}
+        {% elseif page.header.animate_css == "enabled" or theme_config.animate_css.enabled %}
+            {% do assets.addCss('theme://css/animate.css',115) %}
         {% endif %}
-        {% if theme_config.google_fonts_logo.enabled %}
-            {% do assets.addCss('//fonts.googleapis.com/css?family=Special+Elite',100) %}
+        {% if page.header.fontawesome == "disabled" %}
+        {% elseif page.header.fontawesome == "enabled" or theme_config.fontawesome.enabled %}
+            {% do assets.addCss('theme://css/font-awesome.min.css',115) %}
+        {% endif %}
+        {% if theme_config.site_title.enabled and theme_config.google_fonts_logo.enabled %}
+            <link href="//fonts.googleapis.com/css?family=Special+Elite&text={{ site.title|e }}" type="text/css" rel="stylesheet" />
         {% endif %}
     {% endblock %}
     {{ assets.css() }}
@@ -40,6 +44,10 @@
                     {% if content %}
                         {{ content }}
                     {% endif %}
+                    {% if config.plugins.langswitcher.enabled %}
+                    <br />
+                    {% include 'partials/langswitcher.html.twig' %}
+                    {% endif %}
                 </div>
             </div>
             <div id="mobile-navigation">
@@ -54,19 +62,21 @@
         <header id="header">
 
         	<div class="row sg-header">
-	            <div id="logo">
-	                <a href="{{ base_url == '' ? '/' : base_url }}">
-						{% set image = pages.find('/logo').media.images|first %}
-						{% if image %}
-						    {{ image.cropResize(96,96).html }}
-						{% endif %}
-	                </a>
-	            </div>
+	            {% set image = pages.find('/logo').media.images|first %}
+                {% if image %}
+                <div id="logo">
+                    <a href="{{ base_url == '' ? '/' : base_url }}">
+                        {{ image.cropResize(96,96).html }}
+                    </a>
+                </div>
+                {% endif %}
+                {% if theme_config.site_title.enabled %}
 	            <div id="sg-header-title">
 	                <a href="{{ base_url == '' ? '/' : base_url }}">
                         <h3{% if theme_config.google_fonts_logo.enabled %} style="font-family: 'Special Elite', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"{% endif %}>{{ config.site.title }}</h3>
                     </a>
 	            </div>
+                {% endif %}
 	            <div id="navigation" class="{% if theme_config.mobilemenu_breakpoint == 'all' %}hide{% else %}show-for-{{ theme_config.mobilemenu_breakpoint }}{% endif %}">
 	                {% block header_extra %}{% endblock %}
 	                {% if config.plugins.langswitcher.enabled %}
@@ -96,24 +106,30 @@
         {% endblock %}
 
         {% block footer %}
+        {% set content = pages.find('/footer').content %}
+        {% if content %}
         <footer id="footer">
             <div class="row sg-center">
-    			{% set content = pages.find('/footer').content %}
-    			{% if content %}
-    			    {{ content }}
-    			{% endif %}
+                 {{ content }}
             </div>
         </footer>
+        {% endif %}
         {% endblock %}
 
         {% block bottom %}
             {% block javascripts %}
                 {% do assets.addJs('theme://js/what-input.js',{'priority':105, 'group':'bottom'}) %}
                 {% do assets.addJs('theme://js/foundation.js',{'priority':104, 'group':'bottom'}) %}
-                {% do assets.addInlineJs('$(document).foundation();',{'priority':99, 'pipeline':false, 'group':'bottom'}) %}
-                {% if theme_config.google_prettify.enabled %}
+                {% if page.header.wow_js == "disabled" %}
+                {% elseif page.header.wow_js == "enabled" or theme_config.wow_js.enabled %}
+                    {% do assets.addJs('theme://js/wow.js',{'priority':101, 'group':'bottom'}) %}
+                    {% do assets.addInlineJs('var wow = new WOW();wow.init();',{'priority':99, 'pipeline':false, 'group':'bottom'}) %}
+                {% endif %}
+                {% if page.header.google_prettify == "disabled" %}
+                {% elseif page.header.google_prettify == "enabled" or theme_config.google_prettify.enabled %}
                     {% do assets.addJs('https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js',{'priority':100, 'group':'bottom'}) %}
                 {% endif %}
+                {% do assets.addInlineJs('$(document).foundation();',{'priority':99, 'pipeline':false, 'group':'bottom'}) %}
             {% endblock %}
             {{ assets.js('bottom') }}
         {% endblock %}

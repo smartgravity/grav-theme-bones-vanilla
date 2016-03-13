@@ -1,4 +1,4 @@
-title: Text
+title: Columns
 @extends: default
 
 form:
@@ -12,12 +12,12 @@ form:
                 column1:
                   fields:
                     name:
-                      default: modular/text
+                      default: modular/columns
                       @data-options: '\Grav\Common\Page\Pages::modularTypes'
             overrides:
               fields:
                 header.template:
-                  default: modular/text
+                  default: modular/columns
                   @data-options: '\Grav\Common\Page\Pages::modularTypes'
         styles:
           type: tab
@@ -25,10 +25,16 @@ form:
           fields:
             header.styles:
               type: textarea
-              label: CSS Classes
+              label: Row Styles
+              size: medium
+            header.column_styles:
+              type: textarea
+              label: Column Block Styles
+              size: medium
             header.column_number:
               type: select
               label: Max number of columns
+              size: x-small
               classes: fancy
               default: 3
               options:
@@ -39,3 +45,6 @@ form:
                 '6': '6'
                 '7': '7'
                 '8': '8'
+
+        assets:
+          type: ignore

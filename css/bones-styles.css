@@ -30,7 +30,7 @@ ol {
 
 /* BEGIN SmartGravity HEADER */
 .sg-default-layout {
-  padding: 2.5rem 0.9375rem 3.5rem; }
+  padding: 2.5rem 0 3.5rem; }
 
 #error {
   margin: 2.5rem auto 3.5rem;
@@ -41,7 +41,8 @@ ol {
   border-bottom: 1px solid; }
   #header #logo {
     float: left;
-    padding: 0; }
+    padding: 0;
+    margin-right: 0.5rem; }
     #header #logo img {
       float: left;
       width: 48px;
@@ -50,7 +51,7 @@ ol {
     text-decoration: none;
     letter-spacing: 0;
     line-height: 48px;
-    margin: 6px;
+    margin: 6px 6px 6px 0;
     padding: 0;
     float: left; }
 
@@ -123,6 +124,7 @@ ol {
   cursor: pointer;
   font-size: 2rem;
   margin: 0.7rem 0; }
+
 /* Mobilemenu Icon substitute when FontAwesome is disabled */
 .sg-mobilemenu-icon {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -160,7 +162,6 @@ ol {
   border-radius: 3px;
   font-size: 0.85rem;
   margin: 0 2px; }
-
 /* END TAXONOMY TAGS */
 
 /* BEGIN BREADCRUMBS */

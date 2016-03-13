@@ -19,10 +19,19 @@ form:
                 header.template:
                   default: modular/showcase
                   @data-options: '\Grav\Common\Page\Pages::modularTypes'
+
         styles:
           type: tab
           title: Row Style
           fields:
             header.styles:
               type: textarea
-              label: CSS Classes
+              label: Row Styles
+              size: medium
+            header.content_styles:
+              type: textarea
+              label: Content Block Styles
+              size: medium
+
+        assets:
+          type: ignore

@@ -1,2 +1,60 @@
 title: Nopad
-@extends: default
+@extends:
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        assets:
+          type: tab
+          title: Assets
+
+          fields:
+
+            extra_files_title:
+              type: section
+              title: Features
+              underline: true
+
+            header.fontawesome:
+                type: select
+                label: FontAwesome
+                size: small
+                default: use_global
+                options:
+                  'use_global': 'Use Global'
+                  'enabled': 'Enabled'
+                  'disabled': 'Disabled'
+
+            header.animate_css:
+                type: select
+                label: Animate CSS
+                size: small
+                default: use_global
+                options:
+                  'use_global': 'Use Global'
+                  'enabled': 'Enabled'
+                  'disabled': 'Disabled'
+
+            header.wow_js:
+                type: select
+                label: WOW.js
+                size: small
+                default: use_global
+                options:
+                  'use_global': 'Use Global'
+                  'enabled': 'Enabled'
+                  'disabled': 'Disabled'
+
+            header.google_prettify:
+                type: select
+                label: Google Prettify
+                size: small
+                default: use_global
+                options:
+                  'use_global': 'Use Global'
+                  'enabled': 'Enabled'
+                  'disabled': 'Disabled'
