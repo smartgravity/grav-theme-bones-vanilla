@@ -1,10 +1,16 @@
 # Bones Vanilla - Grav Theme
 
-[![Foundation Version](https://img.shields.io/badge/Foundation-v6.1.1-orange.svg)](http://foundation.zurb.com/) 
-[![FontAwesome Version](https://img.shields.io/badge/FontAwesome-v4.5.0-blue.svg)](https://fortawesome.github.io/Font-Awesome/) 
+[![Foundation Version](https://img.shields.io/badge/Foundation-v6.1.2-FF6908.svg)](http://foundation.zurb.com/) 
+[![MotionUI Version](https://img.shields.io/badge/MotionUI-v1.2.0-FF6908.svg)](http://zurb.com/playground/motion-ui) 
+[![FontAwesome Version](https://img.shields.io/badge/FontAwesome-v4.5.0-1d9d74.svg)](https://fortawesome.github.io/Font-Awesome/) 
+[![WOWjs Version](https://img.shields.io/badge/WOW.js-v1.1.2.unofficial-eb3980.svg)](http://mynameismatthieu.com/WOW/) 
+[![AnimateCSS Version](https://img.shields.io/badge/Animate.css-v3.5.1-f35626.svg)](http://daneden.github.io/animate.css/) 
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](http://sgne.ws/1KPEcMD)
 
 **Bones Vanilla** is a [Grav](http://getgrav.org) theme based on [Foundation](http://foundation.zurb.com/) by Zurb and Includes [FontAwesome](https://fortawesome.github.io/Font-Awesome/). This is a base theme meant to be customized. The idea is to provide a starting point for your next custom theme.
+
+#### [Bones Vanilla - Demo](http://demos.smartgravity.com/grav-bones-vanilla/)
+
 
 ![Bones Vanilla Screenshot](assets/bones-vanilla-macbook-pro.png)
 

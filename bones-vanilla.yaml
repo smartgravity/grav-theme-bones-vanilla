@@ -1,10 +1,13 @@
-dropdown:
-  enabled: false
-fontawesome:
+enabled: true
+site_title:
   enabled: true
 google_fonts_logo:
   enabled: true
+fontawesome:
+  enabled: true
 google_prettify:
   enabled: true
+dropdown:
+  enabled: false
 mobilemenu_breakpoint: large
 mobilemenu_position: left
